@@ -1,13 +1,3 @@
-"""
-Módulo: Transformación Geométrica de Matrices
-Descripción: Contiene una función para rotar una matriz rectangular de dimensiones 
-arbitrarias (f filas por c columnas) exactamente 90 grados en sentido horario, 
-invirtiendo sus dimensiones y reubicando sus elementos mediante mapeo de índices.
-
-Autor: Estudiante de Ciencias de la Computación
-Fecha: 2026
-"""
-
 def rotar_90_grados(matriz: list[list[int]]) -> list[list[int]]:
     
     # Determinamos las dimensiones originales
@@ -28,20 +18,21 @@ def rotar_90_grados(matriz: list[list[int]]) -> list[list[int]]:
     return matriz_rotada
     
     # Definimos la matriz de prueba (2 filas x 3 columnas)
-    matriz_original = [
+    
+matriz_original = [
         [1, 2, 3],
         [4, 5, 6]
     ]
 
     # Mostramos la matriz original en consola
-    print("--- MATRIZ ORIGINAL (2x3) ---")
-    for fila in matriz_original:
+print("--- MATRIZ ORIGINAL (2x3) ---")
+for fila in matriz_original:
         print(fila)
 
     # Aplicamos la función de rotación
-    matriz_resultado = rotar_90_grados(matriz_original)
+matriz_resultado = rotar_90_grados(matriz_original)
 
     # Mostramos el resultado de la transformación
-    print("\n--- MATRIZ ROTADA 90° HORARIO (3x2) ---")
-    for fila in matriz_resultado:
+print("\n--- MATRIZ ROTADA 90° HORARIO (3x2) ---")
+for fila in matriz_resultado:
         print(fila)
