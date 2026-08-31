@@ -55,11 +55,11 @@ int main() {
     }
     cout << "SUMA=" << suma << endl;
 
-    if (suma == 25)   // el codigo se DERIVA de los totales correctos[cite: 2]
+    if (suma == 25)   // el codigo se DERIVA de los totales correctos
         cout << "TICKET CERRADO - codigo de cierre: 4421-"
              << totales[0] << totales[1] << totales[2] << suma << endl;
 
-    // Liberacion de memoria para evitar fugas (LeakSanitizer)[cite: 2]
+    // Liberacion de memoria para evitar fugas (LeakSanitizer)
     delete[] totales;
     for (int i = 0; i < N; i++) {
         delete equipos[i];
