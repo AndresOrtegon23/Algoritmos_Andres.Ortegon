@@ -24,7 +24,7 @@ public:
         delete[] historial;
     }
 
-    // Corregida la condicion (i < n en lugar de i < n - 1)[cite: 2]
+    // Correccion de la condicion (i < n en lugar de i < n - 1)
     void registrar(int i, int v) { if (i >= 0 && i < n) historial[i] = v; }
     int  total() const { int s = 0; for (int i = 0; i < n; i++) s += historial[i]; return s; }
     string getCodigo() const { return codigo; }
@@ -54,12 +54,19 @@ int main() {
         suma += totales[i];
     }
     cout << "SUMA=" << suma << endl;
-
+    
     if (suma == 25)   // el codigo se DERIVA de los totales correctos
         cout << "TICKET CERRADO - codigo de cierre: 4421-"
              << totales[0] << totales[1] << totales[2] << suma << endl;
 
     // Liberacion de memoria para evitar fugas (LeakSanitizer)
+
+    if (suma == 25)   // el codigo se deriva de los totales correctos
+        cout << "TICKET CERRADO - codigo de cierre: 4421-"
+             << totales[0] << totales[1] << totales[2] << suma << endl;
+
+    // Liberacion de memoria para evitar fugas 
+
     delete[] totales;
     for (int i = 0; i < N; i++) {
         delete equipos[i];
