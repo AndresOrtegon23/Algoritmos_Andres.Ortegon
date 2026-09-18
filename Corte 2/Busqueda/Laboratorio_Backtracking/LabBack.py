@@ -138,12 +138,7 @@ def ejecutarPruebas(nombreMapa, mapa):
         print("No se encontró ninguna ruta válida que recoja todos los acopios sin repetir casillas.")
 
     print(f"Tiempo real de ejecución: {finTiempo - inicioTiempo:.6f} segundos\n" )
-
-
-# ==========================================
-# EJECUCIÓN PRINCIPAL CON MAPAS 5x5 Y 10x10
-# ==========================================
-
+    
 if __name__ == "__main__":
     # Definicion de mapas de prueba
     mapa5x5 = [
