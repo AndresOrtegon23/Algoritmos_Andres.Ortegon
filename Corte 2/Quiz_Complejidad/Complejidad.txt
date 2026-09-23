@@ -1,0 +1,27 @@
+A. Complejidad: 0(1)
+
+B. Complejidad: 0(n)
+
+C. Complejidad: 0 (n\*\*2)
+
+D. Complejidad: 0 (log n)
+
+E. Complejidad: 0 (n)
+
+
+
+
+
+|Ordenamientos|Complejidad|¿Por que?|
+|-|-|-|
+|bubble sort|0 (n^2)|Porque la mayoría de veces se tendían que hacer varias pasadas y comparaciones, posiblemente en el mejor caso en el que una lista ya este arreglada seria 0 (n)|
+|selection sort|0 (n^2)|Porque aunque la lista ya este ordenando, siempre busca el elemento mínimo de la lista hasta que todos estén en el lugar ejemplo|
+|insertion sort|0 (n^2)|Porque en el código cada elemento suele desplazarse varias posiciones, en el mejor caso en el que la lista ya este ordenada seria 0 (n)|
+|merge\_sort|0 (n log n)|Porque en cada llamada divide la lista en 2, cada mitad vuelve a dividirse hasta llegar a arreglos de un solo elemento|
+
+|quick\_sort|0 (n log n)|Porque divide la lista en 3 partes que deberían ser en partes iguales|
+|-|-|-|
+||||
+
+
+

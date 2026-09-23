@@ -1,5 +1,25 @@
 import time
 
+comparaciones = 0
+intercambios = 0
+
+def bubble_sort(arr):
+    global comparaciones, intercambios
+    comparaciones = 0
+    intercambios = 0
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            comparaciones += 1
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                intercambios += 1
+                swapped = True
+        if not swapped:
+            break
+    return arr
+
 # --- Merge Sort ---
 def mezclar(arreglo, izquierda, medio, derecha, metricas):
     mitadIzquierda = arreglo[izquierda:medio + 1]
@@ -172,3 +192,10 @@ inicio = time.time()
 bucketSort(datos, metricas)
 tiempo = time.time() - inicio
 print(f"Bucket Sort-> Ordenado: {datos} | Comp: {metricas['comparaciones']} | Intercambios: {metricas['intercambios']} | Tiempo: {tiempo:.6f}s")
+
+#5. Bubble Sort
+datos = list(datosPruebaBase)
+inicio = time.time()
+bubble_sort(datos)
+tiempo = time.time() - inicio
+print(f"Bubble Sort-> Ordenado: {datos} | Comp: {comparaciones} | Intercambios: {intercambios} | Tiempo: {tiempo:.6f}s")
