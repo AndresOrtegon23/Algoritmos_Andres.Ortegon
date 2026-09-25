@@ -1,14 +1,14 @@
 def insertionSort(arr):
     # Inicializa el contador de comparaciones
     comparacion = 0
-    n = len(arr)
+    n = len(arr)        # 0(1)
     
-    for i in range(1, n):
+    for i in range(1, n):       # este for tiene la complejidad de 0(n)
         key = arr[i]
         j = i - 1
         
         # Desplaza elementos mayores hacia la derecha
-        while j >= 0:
+        while j >= 0:           # este while tiene la complejidad de 0(n)
             comparacion += 1
             if arr[j] > key:
                 arr[j + 1] = arr[j]
@@ -25,3 +25,5 @@ def insertionSort(arr):
 #2. ¿Cuantas veces se ejecuta el proceso si se duplican los datos? = Si se duplican los datos, el proceso se ejecuta el doble de veces, ya que n se incrementa y el bucle for depende de n.
 #3. Dentro de esa secuencia se invoca otro proceso, ¿cuantos procesos se invocan? = En esta secuencia se invoca un proceso de búsqueda del mínimo en cada iteración del bucle externo, por lo que se invoca n veces.
 #4. ¿Que tipo de estructura de datos se utliza? = En esta estructura de datos se utiliza una lista (array) para almacenar los elementos que se van a ordenar.
+
+#La complejidad de esta funcion es = O (1) + (O(n) x O(n)) = O (1) + O(n^2) = O(n^2) por las reglas de suma y producto de complejidad, se ignora el O(1) y queda O(n^2)
