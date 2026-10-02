@@ -1,0 +1,7 @@
+Llegan :1, 2, 3, 4
+Salen dos
+LLega: 5
+Salen todos
+
+Salida de Pila: [4, 3, 5, 2, 1]
+Salida de Cola: [1, 2, 3, 4, 5]
